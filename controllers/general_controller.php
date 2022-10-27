@@ -1,6 +1,6 @@
 <?php
 //connect to the user account class
-include("../classes/general_class.php");
+include("../classes/Contact_class.php");
 
 //sanitize data
 

@@ -11,7 +11,7 @@
 <body>
     
 <!-- Form -->
-    <form name="form1" id="callForm">
+    <form name="form1" id="callForm" action="./actions/adduser.php">
         <label for= "fname"> Enter First Name</label>
         <br>
         <br>
@@ -29,7 +29,7 @@
     </form>
 <script>
 
-	
+
 </script>
 </body>
 </html>

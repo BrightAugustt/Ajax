@@ -30,7 +30,7 @@
 <script>
 $(document).ready(function(){
 $('#butsave').on('click',function(){
-$("#butsave").attr("disabled", "disabled");
+$("#butsave").attr("disabled", "true");
 var fname = $('#fname').val();
 var fnumber = $('#fnumber').val();
 if (fname!=""&& fnumber!=""){

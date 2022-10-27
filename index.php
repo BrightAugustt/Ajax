@@ -11,7 +11,7 @@
 <body>
     
 <!-- Form -->
-    <form name="form1" id="callForm" action="./actions/adduser.php" method="POST">
+    <form name="form1" id="callForm"  method="POST">
         <label for= "fname"> Enter First Name</label>
         <br>
         <br>

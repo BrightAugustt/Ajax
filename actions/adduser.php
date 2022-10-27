@@ -18,7 +18,7 @@ if(isset($_POST["submit"])){
     if($result ===True){
         echo json_encode(array("statuscode"=>200));
          // redirect to header
-        header('Location:../index.php');
+        // header('Location:../index.php');
     }
     else{
         echo json_encode(array("statusCode"=>201));

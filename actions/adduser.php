@@ -16,7 +16,7 @@ if(isset($_POST["submit"])){
     addContact_ctr($pname,$pphoned);
 
     // redirect to header
-    header('Location:./index.php');
+    header('Location:../index.php');
 
 }else{
     echo "Something went wrong";

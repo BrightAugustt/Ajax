@@ -13,13 +13,22 @@ if(isset($_POST["submit"])){
 
 
     // Call a controller
-    addContact_ctr($pname,$pphoned);
+    $result = addContact_ctr($pname,$pphoned);
 
-    // redirect to header
-    header('Location:../index.php');
+    if($result ===True){
+        echo json_encode(array("statuscode"=>200));
+         // redirect to header
+        header('Location:../index.php');
+    }
+    else{
+        echo json_encode(array("statusCode"=>201));
+    }
 
-}else{
-    echo "Something went wrong";
+
+   
+
+// }else{
+//     echo "Something went wrong";
 }
 
 

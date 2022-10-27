@@ -17,7 +17,7 @@ class general_class extends db_connection
 	public function add_user($pname,$pphoned){
 
         // Write query
-        $sql = "INSERT INTO `phonebook`(`pid`, `pname`, `pphoned`) VALUES ('$pname','$pphoned')";
+        $sql = "INSERT INTO `phonebook`(`pname`, `pphoned`) VALUES ('$pname','$pphoned')";
 
         return $this ->db_query($sql);
 	}

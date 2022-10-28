@@ -25,12 +25,12 @@
         <input type="tel" id="fnumber" name="number" required >
         <br>
         <br>
-        <button id="butsave" value="submit" name="submit" >Submit</button>
+        <button id="butsave" value="submit" name="submit" onclick="formsubmit()" >Submit</button>
     </form>
 <script>
 $(document).ready(function(){
 	$('#butsave').on('click',function(){
-		$("#butsave").attr("disabled", "disabled");
+		$("#butsave").attr("disabled", "false");
 		var fname = $('#fname').val();
 		var fnumber = $('#fnumber').val();
 		if (fname!="" && fnumber!=""){

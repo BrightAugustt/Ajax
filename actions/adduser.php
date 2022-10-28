@@ -16,12 +16,12 @@ if(isset($_POST["submit"])){
     $result = addContact_ctr($pname,$pphoned);
 
     if($result){
-        echo json_encode(array("statuscode"=>200));
+        // echo json_encode(array("statuscode"=>200));
     //      // redirect to header
-        // header('Location:../index.php');
+        header('Location:../index.php');
     }
     else{
-        echo json_encode(array("statusCode"=>201));
+        echo "Something went wrong";
     }
 
 

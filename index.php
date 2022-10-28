@@ -11,7 +11,7 @@
 <body>
     
 <!-- Form -->
-    <form name="form1" id="callForm"  method="POST">
+    <form name="form1" id="callForm" action="./actions/adduser.php" method="POST">
         <label for= "fname"> Enter First Name</label>
         <br>
         <br>
@@ -28,38 +28,32 @@
         <button id="butsave" value="submit" name="submit" onclick="formsubmit()" >Submit</button>
     </form>
 <script>
-$(document).ready(function(){
-	$('#butsave').on('click',function(){
-		event.preventDefault();
-		var fname = $('#fname').val();
-		var fnumber = $('#fnumber').val();
-		if (fname!="" && fnumber!=""){
-			$.ajax({
-				url: "./actions/adduser.php",
-				type: "POST",
-				data: {
-					fname:fname,
-					fnumber:fnumber,
-				},
-				cache:false,
-				success: function(dataResult){
-					var dataResult = JSON.parse(dataResult);
-					if(dataResult.statusCode==200){
-						$('#callForm').find('input:text').val('');
-						$("#success").show();
-						$('#success').html('Data added successfully!');
-					}
-					else if(dataResult.statusCode==201){
-						alert("Error occured!");
-					}
-				}
-			});	
-			}
-			else{
-				alert('Please fill all the field');
-			}
-});
-});
+      
+	  // When DOM is loaded this 
+	  // function will get executed
+		  // function will get executed 
+		  // on click of submit button
+		  $("#butsave").click(function(ev) {
+			  var form = $("#callForm");
+			  var url = form.attr('action');
+			  $.ajax({
+				  type: "POST",
+				  url: url,
+				  data: form.serialize(),
+				  success: function(data) {
+						
+					  // Ajax call completed successfully
+					  alert("Form Submited Successfully");
+				  },
+				  error: function(data) {
+						
+					  // Some error in ajax call
+					  alert("some Error");
+				  }
+			  });
+		  });
+	  });
+	  </script>
 
 </script>
 </body>

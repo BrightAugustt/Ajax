@@ -36,7 +36,8 @@
 		  $("#butsave").click(function(ev) {
 			  var form = $("#callForm");
 			  var url = form.attr('action');
-			  $.ajax({
+			  if (form!=""){
+				$.ajax({
 				  type: "POST",
 				  url: url,
 				  data: form.serialize(),
@@ -51,8 +52,12 @@
 					  alert("some Error");
 				  }
 			  });
+			  }else{
+				alert("Please fill all the flield");
+			  }
+			  
 		  });
-	  });
+
 	  </script>
 
 </script>

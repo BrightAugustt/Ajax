@@ -30,7 +30,7 @@
 <script>
 $(document).ready(function(){
 	$('#butsave').on('click',function(){
-		$("#butsave").attr("disabled", "false");
+		event.preventDefault();
 		var fname = $('#fname').val();
 		var fnumber = $('#fnumber').val();
 		if (fname!="" && fnumber!=""){
@@ -45,7 +45,6 @@ $(document).ready(function(){
 				success: function(dataResult){
 					var dataResult = JSON.parse(dataResult);
 					if(dataResult.statusCode==200){
-						$("#butsave").removeAttr("disabled");
 						$('#callForm').find('input:text').val('');
 						$("#success").show();
 						$('#success').html('Data added successfully!');

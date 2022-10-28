@@ -15,7 +15,7 @@ if(isset($_POST["submit"])){
     // Call a controller
     $result = addContact_ctr($pname,$pphoned);
 
-    if($result === True){
+    if($result){
         echo json_encode(array("statuscode"=>200));
     //      // redirect to header
         // header('Location:../index.php');

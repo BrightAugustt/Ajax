@@ -34,9 +34,11 @@
 		  // function will get executed 
 		  // on click of submit button
 		  $("#butsave").click(function(ev) {
-			  var form = $("#callForm");
+			//   var form = $("#callForm");
+			  var fname = $("#fname").val();
+			  var fnumber = $("#fnumber").val();
 			  var url = form.attr('action');
-			  if (form!=""){
+			  if (fname!="" && fnumber!=""){
 				$.ajax({
 				  type: "POST",
 				  url: url,

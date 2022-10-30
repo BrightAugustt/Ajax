@@ -27,12 +27,7 @@
         <br>
         <button id="butsave" value="submit" name="submit" onclick="formsubmit()" >Submit</button>
     </form>
-<script>
-      
-	  // When DOM is loaded this 
-	  // function will get executed
-		  // function will get executed 
-		  // on click of submit button
+<!-- <script>
 		  $("#butsave").click(function(ev) {
 			//   var form = $("#callForm");
 			  var fname = $("#fname").val();
@@ -45,8 +40,8 @@
 				  data: form.serialize(),
 				  success: function(data) {
 						
-					  // Ajax call completed successfully
-					  alert("Form Submited Successfully");
+					// Ajax call completed successfully
+					alert("Form Submited Successfully");
 				  },
 				  error: function(data) {
 						
@@ -60,7 +55,7 @@
 			  
 		  });
 
-	  </script>
+</script> -->
 
 </script>
 </body>
